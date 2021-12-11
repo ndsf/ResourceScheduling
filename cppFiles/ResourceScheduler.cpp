@@ -419,11 +419,11 @@ void ResourceScheduler::outputSolutionFromCore() {
 
 
 void ResourceScheduler::outputSolutionFromBlockVerbose() {
-	// cout << "\nTask2 Solution (Block Perspective) of Teaching Assistant:\n\n";
-	// cout << "Job order: [";
-	// for (auto jobId : jobsOrder)
-	// 	cout << jobId << ", ";
-	// cout << "]\n\n";
+	cout << "\nTask" << taskType << " Solution (Block Perspective) of Teaching Assistant:\n\n";
+	cout << "Job order: [";
+	for (auto jobId : jobsOrder)
+		cout << jobId << ", ";
+	cout << "]\n\n";
 	for (int jobId = 0; jobId < numJob; jobId++) {
 		double speed = Sc[jobId] * g(this->jobCore[jobId]);
 		cout << "Job" << jobId << " obtains " << jobCore[jobId] << " cores [";
@@ -446,7 +446,7 @@ void ResourceScheduler::outputSolutionFromBlockVerbose() {
 }
 
 void ResourceScheduler::outputSolutionFromCoreVerbose() {
-	cout << "\nTask2 Solution (Core Perspective) of Teaching Assistant:\n\n";
+	cout << "\nTask" << taskType << " Solution (Core Perspective) of Teaching Assistant:\n\n";
 	double maxHostTime = 0, totalRunningTime = 0.0;
 	for (int i = 0; i < numHost; i++) {
 		double hostTime = *max_element(hostCoreFinishTime[i].begin(), hostCoreFinishTime[i].end());
