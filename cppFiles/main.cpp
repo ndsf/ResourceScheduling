@@ -17,7 +17,6 @@ int main() {
 	rs.setBest();
 	rs.outputSolutionFromBlock();
 	rs.outputSolutionFromCore();
-
 	return 0;
 }
 
