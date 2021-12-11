@@ -69,8 +69,9 @@ public:
 	tuple<int, int, int, int> randomExchange();
 	void rollBackExchange(tuple<int, int, int, int>);
 	void outputSolutionFromBlock();
-	// void outputSolutionFromBlockForVisualization();
+	void outputSolutionFromBlockVerbose();
 	void outputSolutionFromCore();
+	void outputSolutionFromCoreVerbose();
 	void visualization(); // An optional fuction.
 	double g(int);
 };

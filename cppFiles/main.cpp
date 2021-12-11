@@ -17,6 +17,8 @@ int main() {
 	rs.setBest();
 	rs.outputSolutionFromBlock();
 	rs.outputSolutionFromCore();
+	// rs.outputSolutionFromBlockVerbose();
+	// rs.outputSolutionFromCoreVerbose();
 	return 0;
 }
 
